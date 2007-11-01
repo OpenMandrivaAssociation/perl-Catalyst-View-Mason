@@ -1,6 +1,6 @@
 %define module Catalyst-View-Mason
 %define name	 perl-%{module}
-%define version	 0.13
+%define version	 0.15
 %define release	 %mkrel 1
 
 Summary:	Mason View Class
