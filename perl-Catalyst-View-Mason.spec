@@ -14,7 +14,6 @@ Source:     http://www.cpan.org/modules/by-module/Catalyst/%{module}-%{version}.
 BuildRequires:	perl-Catalyst >= 5
 BuildRequires:	perl(HTML::Mason)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Want to use a Mason component in your views? No problem!
