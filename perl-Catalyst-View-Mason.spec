@@ -13,6 +13,7 @@ URL:		http://search.cpan.org/dist/%{module}/
 Source:     http://www.cpan.org/modules/by-module/Catalyst/%{module}-%{version}.tar.gz
 BuildRequires:	perl-Catalyst >= 5
 BuildRequires:	perl(HTML::Mason)
+BuildRequires:	perl(MRO::Compat)
 BuildArch:	noarch
 Buildroot:	%{_tmppath}/%{name}-%{version}
 
