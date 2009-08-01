@@ -1,28 +1,28 @@
-%define module Catalyst-View-Mason
-%define name	 perl-%{module}
-%define version	 0.17
-%define release	 %mkrel 1
+%define upstream_name    Catalyst-View-Mason
+%define upstream_version 0.17
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Mason View Class
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	Artistic/GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/Catalyst/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Catalyst/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-Catalyst >= 5
 BuildRequires:	perl(HTML::Mason)
 BuildRequires:	perl(MRO::Compat)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Want to use a Mason component in your views? No problem!
 Catalyst::View::Mason comes to the rescue.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL installdirs=vendor --skipdeps
@@ -43,4 +43,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Catalyst
 %{_mandir}/*/*
-
