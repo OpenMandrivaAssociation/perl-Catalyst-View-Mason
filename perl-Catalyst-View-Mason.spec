@@ -1,15 +1,13 @@
 %define upstream_name    Catalyst-View-Mason
-%define upstream_version 0.19
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.19
+Release:	2
 
 Summary:	Mason View Class
 License:	Artistic/GPL
 Group:		Development/Perl
 Url:		https://dev.catalyst.perl.org/repos/Catalyst/Catalyst-View-Mason/trunk
-Source0:	https://cpan.metacpan.org/authors/id/J/JJ/JJNAPIORK/Catalyst-View-Mason-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JJ/JJNAPIORK/Catalyst-View-Mason-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ Want to use a Mason component in your views? No problem!
 Catalyst::View::Mason comes to the rescue.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL installdirs=vendor --skipdeps
@@ -52,9 +50,7 @@ make test
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.170.0-1mdv2010.0
 + Revision: 406311
-- rebuild using %%perl_convert_version
-
-* Mon May 04 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.17-1mdv2010.0
+- rebuild using %0.19 Mon May 04 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.17-1mdv2010.0
 + Revision: 371663
 - update to new version 0.17
 
